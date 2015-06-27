@@ -10,6 +10,8 @@ FIELDS = [
     'genre'
 ]
 
+# Format the output book title and author so that the neural network will learn
+# to output the generated books in a machine-parsable format.
 with open('../book_metadata.csv') as csvfile:
     reader = csv.DictReader(csvfile, fieldnames=FIELDS)
     for row in reader:
