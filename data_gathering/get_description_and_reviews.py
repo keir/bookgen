@@ -27,15 +27,19 @@ import csv
 book_info = {}
 file2 = open('book_metadata_summary.csv','a')
 
-    
+ok = False
+
 with open('book_metadata.csv','rb') as csvfile:
     reader = csv.reader(csvfile)
     for vals in reader:
         author = vals[0]
         title = vals[1]
         isbn = vals[2]
-        desc = get_goodreads(isbn)
-    
-        res = '%s,%s,%s,"%s"' % (isbn, author, title, desc)
-    
-        file2.write(res + '\n')
+        if isbn == '9781439132876':
+            ok = True
+        if ok:
+            desc = get_goodreads(isbn)
+        
+            res = '%s,%s,%s,"%s"' % (isbn, author, title, desc)
+        
+            file2.write(res + '\n')
