@@ -12,21 +12,32 @@
 	The Neural Public Library </span>
 	<BR>
 
-<div style="margin-left:auto; margin-right:auto; width: 600px;">
+<div style="margin-left:auto; margin-right:auto; width: 700px;">
 &nbsp;
 &nbsp;
-	<a href="?genre=science fiction">Sci-Fi</a>
+{% if genre == "science fiction" %}
+	<a href="?genre=science fiction" class="highlight">Sci-Fi</a>
+{% else %}
+	<a href="?genre=science fiction" >Sci-Fi</a>
+{% endif %}
 &nbsp;
 &nbsp;
-<a href="?genre=romance">Romance</a>
+{% if genre == "romance" %}
+	<a href="?genre=romance" class="highlight">Romance</a>
+{% else %}
+	<a href="?genre=romance">Romance</a>
+{% endif %}
 &nbsp;
 &nbsp;
-<a href="?genre=mix">Sci-Fi + Romance = ?</a>
+{% if genre == "mix" %}
+	<a href="?genre=mix" class="highlight">Sci-Fi + Romance = ?</a>
+{% else %}
+	<a href="?genre=mix">Sci-Fi + Romance = ?</a>
+{% endif %}
 </div>
 </span>
 <BR>
 
-<h3>Genre: {{ genre }}</h3>
 </div>
 
 <div id="book" style="display: none;">
@@ -37,5 +48,9 @@
   <div id="author">{{ book.author }}</div>
 </div>
 <div id="spacer">&nbsp;</div>
+
+<P>
+	
+</P>
 
 {% endblock %}
