@@ -4,10 +4,17 @@ body {
 }
 
 #bookgen {
-	font-size: 40px;
+	font-size: 60px;
+	font-family: 'Cinzel', serif;
 }
 
-img {
+a {
+	font-size: 30px;
+	color: #000000;
+	font-family: 'Cinzel', serif;
+}
+
+#image {
 	width: 546px;
 }
 

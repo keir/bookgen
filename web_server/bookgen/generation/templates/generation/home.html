@@ -1,18 +1,33 @@
 {% extends 'generation/base.html' %}
+{% load staticfiles %}
 
 {% block main %}
-<span id="bookgen">BookGen</span>
+<P>
+	
+</P>
+<span id="bookgen">
+	<img width=140 height=140 src="{% static "generation/img/logo.png" %}">
+	
+      
+	The Neural Public Library </span>
+	<BR>
 
+<div style="margin-left:auto; margin-right:auto; width: 600px;">
 &nbsp;
 &nbsp;
-	<a href="?genre=science fiction"><button class="btn btn-sm btn-success">Sci-Fi</button></a>
+	<a href="?genre=science fiction">Sci-Fi</a>
 &nbsp;
 &nbsp;
-<a href="?genre=romance"><button class="btn btn-sm btn-success">Romance</button></a>
+<a href="?genre=romance">Romance</a>
+&nbsp;
+&nbsp;
+<a href="?genre=mix">Sci-Fi + Romance = ?</a>
+</div>
+</span>
+<BR>
 
-<a href="?genre=mix"><button class="btn btn-sm btn-success">Sci-Fi + Romance = ?</button></a>
-
-<h2>Genre: {{ genre }}</h2>
+<h3>Genre: {{ genre }}</h3>
+</div>
 
 <div id="book" style="display:none;">
 
