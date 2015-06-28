@@ -85,7 +85,8 @@ $(document).ready(function(){
 			$('#title').css({'font-size': '50px'});
 		}
 	  
+	  $("#book").toggle();
 	});
 
-	$("#book").toggle();
+	
 });
