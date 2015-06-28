@@ -27,8 +27,8 @@ $(document).ready(function(){
 	$img.on('load', function(){
 		var height = $img.height();
 		
-		var padding = Math.floor(Math.random() * (15));
-		$img.css({'padding': padding + 'px'});
+		//var padding = Math.floor(Math.random() * (15));
+		//img.css({'padding': padding + 'px'});
 
                 var palette = colorThief.getPalette($img[0], 16)
 

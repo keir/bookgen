@@ -25,15 +25,17 @@ a:hover {
 }
 
 #image {
-	width: 346px;
+	width: 356px;
 	margin-left: auto;
 	margin-right: auto;
+        padding: 0;
 }
 
 #image_container {
         overflow: hidden;
-	width: 346px;
-	max-height: 326px;
+	width: 356px;
+	max-height: 286px;
+        padding: 0;
 }
 
 #book {
