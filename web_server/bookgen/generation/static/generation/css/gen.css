@@ -55,3 +55,7 @@ a {
 	margin-right: auto;
 }
 
+#spacer {
+        height: 300px;
+        clear:both;
+}
