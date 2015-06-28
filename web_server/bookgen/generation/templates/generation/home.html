@@ -15,13 +15,25 @@
 <div style="margin-left:auto; margin-right:auto; width: 600px;">
 &nbsp;
 &nbsp;
-	<a href="?genre=science fiction">Sci-Fi</a>
+{% if genre == "science fiction" %}
+	<a href="?genre=science fiction" class="highlight">Sci-Fi</a>
+{% else %}
+	<a href="?genre=science fiction" >Sci-Fi</a>
+{% endif %}
 &nbsp;
 &nbsp;
+{% if genre == "science fiction" %}
+	<a href="?genre=romance" class="highlight">Romance</a>
+{% else %}
 <a href="?genre=romance">Romance</a>
+{& endif %}
 &nbsp;
 &nbsp;
+{% if genre == "science fiction" %}
+	<a href="?genre=mix" class="highlight">Sci-Fi + Romance = ?</a>
+{% else %}
 <a href="?genre=mix">Sci-Fi + Romance = ?</a>
+{% endif %}
 </div>
 </span>
 <BR>
@@ -36,5 +48,9 @@
   <div id="title">{{ book.title }}</div>
   <div id="author">{{ book.author }}</div>
 </div>
+
+<P>
+	
+</P>
 
 {% endblock %}
