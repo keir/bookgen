@@ -3,9 +3,13 @@ body {
 	width: 100%;
 }
 
+img {
+	width: 546px;
+}
 
 #book {
-	width: 500px;
+	border: 2px #000000 solid;
+	width: 550px;
 	margin-left: auto;
 	margin-right: auto;
 }

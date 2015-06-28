@@ -10,7 +10,7 @@ IMG_URL = 'https://farm%s.staticflickr.com/%s/%s_%s_%s.jpg'
 
 def get_image(title, genre):
     
-    url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&licenses=2,4&content_type=1" % (FLICKR_KEY, title)
+    url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&licenses=2,4&content_type=1" % (FLICKR_KEY, title + " " + genre)
     
     try:
         usock = urllib2.urlopen(url) 
@@ -20,10 +20,16 @@ def get_image(title, genre):
     
     tree = ET.fromstring(txt)
     
+    imgs = []
+    count = 0
+    
     for photos in tree.findall('photos'):
         for photo in photos.findall('photo'):
-            return IMG_URL % (photo.attrib['farm'], photo.attrib['server'], photo.attrib['id'], photo.attrib['secret'], 'z')
+            count += 1
+            imgs.append(IMG_URL % (photo.attrib['farm'], photo.attrib['server'], photo.attrib['id'], photo.attrib['secret'], 'z'))
             
+    r = random.randint(0, count -1)
+    return imgs[r]
             
 def home(request):
     
