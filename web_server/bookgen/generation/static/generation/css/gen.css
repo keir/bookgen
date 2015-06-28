@@ -3,6 +3,10 @@ body {
 	width: 100%;
 }
 
+#bookgen {
+	font-size: 40px;
+}
+
 img {
 	width: 546px;
 }

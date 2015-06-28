@@ -38,6 +38,10 @@ def home(request):
     
     font = Font.objects.filter(genre=genre).order_by('?').first().name
     
+    colors = ColorPalette.objects.filter(genre=genre).order_by('?').first()
+    
     url = get_image(book.title, genre)
     
-    return render(request, 'generation/home.html', {'book': book, 'font': font, 'image_url': url})
+    return render(request, 'generation/home.html', {'book': book, 'font': font, 'image_url': url, 'colors': colors})
+
+
