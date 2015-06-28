@@ -1,3 +1,5 @@
+import json
+import re
 import sys
 
 """
@@ -15,7 +17,6 @@ A riveting description of the book goes here.  Buct ceare, imet theytore
 beturpel cith in a Mazing meen to fifen Batabe auses. Icter is erigy to bcing
 """
 
-import re
 title_author_pattern = re.compile('^>>> (.+) ### (.+) |||$')
 
 num_total = 0
@@ -25,7 +26,8 @@ num_junk = 0
 
 all_gibberish_books = open(sys.argv[1]).read()
 for maybe_gibberish_book in all_gibberish_books.split('\n\n'):
-  print '.',
+  num_total += 1
+
   maybe_gibberish_book = maybe_gibberish_book.strip()
 
   # Each book sholud be just 2 lines: title/author and description.
@@ -47,7 +49,7 @@ for maybe_gibberish_book in all_gibberish_books.split('\n\n'):
     num_junk += 1
     continue
 
-  print repr([title, author, description])
+  print json.dumps([title, author, description])
 
 sys.stderr.write('Total: %d, invalid split: %d, invalid match: %d, junk: %d\n' %
                  (num_total, num_invalid_split, num_invalid_match, num_junk))
