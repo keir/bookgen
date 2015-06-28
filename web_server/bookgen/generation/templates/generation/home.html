@@ -29,20 +29,12 @@
 <h3>Genre: {{ genre }}</h3>
 </div>
 
-<div id="book" style="display:none;">
-
-<img id="image" src="proxy/?theurl={{ image_url }}">
-	<div id="title">{{ book.title }}
-		</div>
-	
-	<div id="author">
-		<h3>
-		{{ book.author }}
-		</h3>
-	</div>
-	
-
-
+<div id="book">
+  <div id="image_container">
+    <img id="image" src="proxy/?theurl={{ image_url }}">
+  </div>
+  <div id="title">{{ book.title }}</div>
+  <div id="author">{{ book.author }}</div>
 </div>
 
 {% endblock %}
