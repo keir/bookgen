@@ -1,0 +1,25 @@
+
+body {
+	width: 100%;
+}
+
+
+#book {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#author {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title {
+	font-size: 70px;
+	text-align: center;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}

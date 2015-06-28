@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>        
+			{% block title %}
+        	{% endblock %}
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="{% static "generation/css/bootstrap.css" %}" rel="stylesheet">
+        
+        <link href="{% static "generation/css/gen.css" %}" rel="stylesheet">
+        
+        <link href='http://fonts.googleapis.com/css?family={{ font }}' rel='stylesheet' type='text/css'>
+        
+        <script type="text/javascript" src="{% static "generation/js/gen.js" %}"></script>
+        
+        <style>
+        	#title {
+        		font-family: '{{ font }}';
+        	}
+        </style>
+	</head>
+	<body>
+		
+		<div class="container">
+	        {% block main %}
+	        {% endblock %}
+        </div>
+     </body>
+</html>
