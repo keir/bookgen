@@ -39,7 +39,6 @@ $(document).ready(function(){
 
                 var bookBackgroundColor = sortedPalette[0];
                 var authorColor = sortedPalette[14];
-                console.log(sortedPalette);
 
                 if (1 || Math.random() < 0.5) {
                   titleBackgroundColor = bookBackgroundColor;
@@ -105,17 +104,24 @@ $(document).ready(function(){
 		} 
                 */
 		
-		if ($('#title').height() > 400) {
-			$('#title').css({'font-size': '60px'});
-			if ($('#title').height() > 400) {
-				$('#title').css({'font-size': '50px'});
+	  
+	  $("#book").toggle();
+
+                console.log('height');
+                console.log($('#title').height());
+                console.log($('#title').outerHeight());
+                console.log($('#title').innerHeight());
+		if ($('#title').height() > 75) {
+                        console.log('GOT BIG HEIGHT!!!!!!!!!!!!');
+			$('#title').css({'font-size': '40px'});
+			if ($('#title').height() > 75) {
+                              console.log('Another BIG HEIGHT!!!!!!!!!!!!');
+				$('#title').css({'font-size': '30px'});
 			}
 		}
 		if ($('#title').offsetWidth < $('#title').scrollWidth) {
 			$('#title').css({'font-size': '50px'});
 		}
-	  
-	  $("#book").toggle();
 	});
 
 	
