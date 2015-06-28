@@ -19,5 +19,6 @@ from generation import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^proxy/', views.proxy_image, name='proxy_image'),
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 import random
+import requests
 import urllib2
 import xml.etree.ElementTree as ET
 
@@ -81,3 +83,12 @@ def home(request):
     return render(request, 'generation/home.html', {'book': book, 'font': font, 'image_url': url, 'colors': colors, 'genre': genre})
 
 
+def proxy_image(request):
+    print 'Got proxy call!!!'
+    try:
+        image_data = requests.get(request.GET['theurl']).content
+        print 'Fetched:', request.GET['theurl']
+    except Exception as ex:
+        print 'Got exception:', ex
+        return
+    return HttpResponse(image_data, content_type='image/jpg')
