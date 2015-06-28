@@ -80,6 +80,10 @@ def home(request):
     
     url = get_image(book.title, genre)
     
+    r = random.randint(0, 6)
+    if r == 2:
+        book.title = book.title.upper()
+    
     return render(request, 'generation/home.html', {'book': book, 'font': font, 'image_url': url, 'colors': colors, 'genre': genre})
 
 
