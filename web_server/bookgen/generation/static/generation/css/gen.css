@@ -33,7 +33,7 @@ a:hover {
 #image_container {
         overflow: hidden;
 	width: 346px;
-	height: 326px;
+	max-height: 326px;
 }
 
 #book {
@@ -50,7 +50,7 @@ a:hover {
 }
 
 #title {
-	font-size: 30px;
+	font-size: 34px;
 	text-align: center;
 	width: 300px;
 	margin-left: auto;
