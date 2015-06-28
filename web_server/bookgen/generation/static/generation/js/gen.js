@@ -9,10 +9,9 @@ $(document).ready(function(){
 		
 		var padding = Math.floor(Math.random() * (15));
 		$img.css({'padding': padding + 'px'});
+	
 		
-			var img_border_radius = Math.floor(Math.random() * (12));
 
-			$('#image').css({'border-radius': img_border_radius + 'px'});
 		
 		if (height > 550) {
 			var less = height - 100;
@@ -37,6 +36,18 @@ $(document).ready(function(){
 			var border_radius = Math.floor(Math.random() * (12));
 
 			$('#title').css({'border-radius': border_radius + 'px'});
+			
+					var img_border_radius = Math.floor(Math.random() * (4));
+		
+		if (img_border_radius == 1) {
+			$img.addClass('img-rounded');
+		}
+		if (img_border_radius == 2) {
+			$img.addClass('img-polaroid');
+		}
+		if (img_border_radius == 3) {
+			$img.addClass('img-circle');
+		}
 			
 		}
 		
